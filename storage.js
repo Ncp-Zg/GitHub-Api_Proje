@@ -20,7 +20,7 @@ class Storage{
 
         //IndexOf
         if( users.indexOf(username) === -1) {
-            users.push(username);
+            users.unshift(username);
         }
         localStorage.setItem("searched", JSON.stringify(users));
 
@@ -31,5 +31,5 @@ class Storage{
 
         localStorage.removeItem("searched");
     }
-    
+
 }
