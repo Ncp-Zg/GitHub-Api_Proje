@@ -112,5 +112,10 @@ class UI {
             this.lastUsers.appendChild(li);
         }
     }
-
+    
+    clearAllSearchedFromUI(){
+        while(this.lastUsers.firstElementChild !== null){
+            this.lastUsers.removeChild(this.lastUsers.firstElementChild);
+        }
+    }
 }
