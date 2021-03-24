@@ -32,4 +32,18 @@ class Storage{
         localStorage.removeItem("searched");
     }
 
+    static clearCertainUser(el){
+        //belli bir kişiyi silme
+
+        const user = JSON.parse(localStorage.getItem("searched"));
+        const x = user.findIndex(user=>user+"delete" === el);
+        user.splice(x,1);
+        localStorage.setItem("searched", JSON.stringify(user));
+
+
+
+
+
+    }
+
 }

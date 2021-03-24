@@ -105,11 +105,18 @@ class UI {
             // <li class="list-group-item">asdaskdjkasjkşdjşasjd</li>
 
             const li = document.createElement("li");
-
-            li.className = "list-group-item";
+            
+            li.className = "list-group-item d-flex justify-content-between";
             li.textContent = username;
 
-            this.lastUsers.appendChild(li);
+            const button = document.createElement("button");
+            button.innerHTML = "delete";
+            button.addEventListener("click",this.deleteLastSearch);
+            li.appendChild(button);
+
+
+
+            this.lastUsers.insertBefore(li,lastUsers.firstElementChild);
         }
     }
     
@@ -117,5 +124,12 @@ class UI {
         while(this.lastUsers.firstElementChild !== null){
             this.lastUsers.removeChild(this.lastUsers.firstElementChild);
         }
+    }
+
+    deleteLastSearch(e){
+        
+        e.target.parentElement.remove();
+        Storage.clearCertainUser(e.target.parentElement.innerText);
+        
     }
 }

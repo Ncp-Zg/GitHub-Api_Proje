@@ -62,8 +62,19 @@ function getAllSearched(){
     let result = "";
     users.forEach(user => {
         //<li class="list-group-item">asdaskdjkasjkşdjşasjd</li>
-        result += `<li class="list-group-item">${user}</li>`
+        // result += `<li class="list-group-item">${user}</li>`
+
+        const li = document.createElement("li");
+            
+            li.className = "list-group-item";
+            li.textContent = user;
+
+            const button = document.createElement("button");
+            button.innerHTML = "delete";
+            button.addEventListener("click",ui.deleteLastSearch);
+            li.appendChild(button);
+
+            lastUsers.appendChild(li);
     });
 
-    lastUsers.innerHTML = result;
 }
