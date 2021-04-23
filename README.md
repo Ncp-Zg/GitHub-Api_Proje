@@ -1,2 +1,1 @@
-# GitHub-Api_Proje
-GitHub Api_Proje
+https://github.com/Ncp-Zg/GitHub-Api_Proje.git
