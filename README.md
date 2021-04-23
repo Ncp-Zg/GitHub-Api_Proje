@@ -1,1 +1,1 @@
-https://github.com/Ncp-Zg/GitHub-Api_Proje.git
+https://ncp-zg.github.io/GitHub-Api_Proje/
